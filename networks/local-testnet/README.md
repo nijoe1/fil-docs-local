@@ -21,10 +21,11 @@ The nodes we’re going to run have relatively lightweight hardware requirements
 
 ## Steps
 
-To build the nodes, you’ll need some specific software. Run the following command to install the software prerequisites:
+To build the nodes, you'll need some specific software. Run the following command to install the software prerequisites:
 
-### MacOS
+{% tabs tab1="MacOS", tab2="Ubuntu" %}
 
+{% tab1 %}
 1. Open a terminal window.
 2.  Check that you have [Homebrew](https://brew.sh/) installed.
 
@@ -66,8 +67,7 @@ To build the nodes, you’ll need some specific software. Run the following comm
     source "$HOME/.cargo/env"
     ```
 
-### Ubuntu
-
+{% tab2 %}
 1.  Install the following dependencies:
 
     ```shell
@@ -95,12 +95,15 @@ source "$HOME/.cargo/env"
 
 5. Done! You can move on to the [Pre-build](#pre-build) section.
 
+{% endtabs %}
+
 ### Pre-build
 
-Before we can build the Lotus binaries, there’s some setup we need to do. We’ll create the executable binaries within a new `~/lotus-devnet`.
+Before we can build the Lotus binaries, there's some setup we need to do. We'll create the executable binaries within a new `~/lotus-devnet`.
 
-#### MacOS Intel
+{% tabs tab1="MacOS Intel", tab2="MacOS ARM", tab3="Ubuntu" %}
 
+{% tab1 %}
 1.  Clone the repository:
 
     ```shell
@@ -114,8 +117,7 @@ Before we can build the Lotus binaries, there’s some setup we need to do. We�
     ```
 3. Done! You can move on to the [Build](#build) section.
 
-#### MacOS ARM
-
+{% tab2 %}
 1.  Clone the repository into a new `~/lotus-devnet` directory:
 
     ```shell
@@ -136,8 +138,7 @@ Before we can build the Lotus binaries, there’s some setup we need to do. We�
     ```
 4. Done! You can move on to the [Build](#build) section.
 
-#### Ubuntu
-
+{% tab3 %}
 1.  Clone the repository into a new `~/lotus-devnet` directory:
 
     ```shell
@@ -158,6 +159,8 @@ Before we can build the Lotus binaries, there’s some setup we need to do. We�
 
     If in doubt, ignore this command and move on to [the next section](#build).
 4. Done! You can move on to the [Build](#build) section.
+
+{% endtabs %}
 
 ### Build
 

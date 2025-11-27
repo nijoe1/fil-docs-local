@@ -5,7 +5,10 @@
   "main": "update-versions.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-versions": "node update-versions.js"
+    "update-versions": "node update-versions.js",
+    "build": "./build.sh build",
+    "serve": "./build.sh serve",
+    "serve:port": "./build.sh serve"
   },
   "repository": {
     "type": "git",
@@ -17,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/filecoin-project/filecoin-docs/issues"
   },
-  "homepage": "https://github.com/filecoin-project/filecoin-docs#readme"
+  "homepage": "https://github.com/filecoin-project/filecoin-docs#readme",
+  "devDependencies": {
+    "gitbook-plugin-tabs": "0.0.7"
+  }
 }

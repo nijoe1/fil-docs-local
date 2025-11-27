@@ -11,3 +11,5 @@ Thumbs.db
 **/:Zone.Identifier
 lychee*
 _book/
+node_modules/
+package-lock.json

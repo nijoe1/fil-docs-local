@@ -10,6 +10,7 @@
 ## Table of contents <!-- omit in toc -->
 
 - [About this repo](#about-this-repo)
+- [Local Development](#local-development)
 - [Contributing](#contributing)
   - [Link checking](#link-checking)
 - [Issues](#issues)
@@ -20,6 +21,47 @@
 ## About this repo
 
 This repository manages the documentation for the [Filecoin network](https://filecoin.io). The content is built and hosted by [GitBook](https://gitbook.com). View the docs site at [docs.filecoin.io](https://docs.filecoin.io).
+
+## Local Development
+
+You can build and preview the documentation locally using the legacy gitbook-cli. This requires Node.js v10 (the build script handles this automatically via nvm).
+
+### Prerequisites
+
+- [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager)
+
+### Quick Start
+
+```bash
+# Build the gitbook
+./build.sh build
+
+# Build and serve locally (default port 4003)
+./build.sh serve
+
+# Serve on a custom port
+./build.sh serve 8080
+
+# Serve without rebuilding
+./build.sh serve-only
+
+# Stop any running servers
+./build.sh stop
+```
+
+Or using npm:
+
+```bash
+npm run build    # Build the gitbook
+npm run serve    # Build and serve locally
+```
+
+The build script will:
+1. Check your current Node.js version
+2. Switch to Node.js v10 if needed (via nvm)
+3. Install gitbook-cli if not present
+4. Build/serve the documentation
+5. Restore your original Node.js version when done
 
 ## Publishing
 This repo is synced to [GitBook](https://gitbook.com) using [GitBook's GitSync](https://gitbook.com/docs/getting-started/git-sync).  When a PR to `main` is merged, a new GitBook is published.  This happens as a result of the GitBook applicaiton, not a GitHub Action workflow in the repo.  

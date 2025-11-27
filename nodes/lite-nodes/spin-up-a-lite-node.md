@@ -17,10 +17,11 @@ Lite-nodes have relatively lightweight hardware requirements. Your machine shoul
 2. A dual-core CPU.
 3. At least 4 GiB of storage space.
 
-To build the lite-node, you’ll need some specific software. Run the following command to install the software prerequisites:
+To build the lite-node, you'll need some specific software. Run the following command to install the software prerequisites:
 
-### MacOS
+{% tabs tab1="MacOS", tab2="Ubuntu" %}
 
+{% tab1 %}
 1. Ensure you have [XCode](https://developer.apple.com/xcode/) and [Homebrew](https://brew.sh/) installed.
 2.  Install the following dependencies:
 
@@ -28,8 +29,7 @@ To build the lite-node, you’ll need some specific software. Run the following 
     brew install go jq pkg-config hwloc coreutils rust
     ```
 
-### Ubuntu
-
+{% tab2 %}
 1.  Install the following dependencies:
 
     ```shell
@@ -50,12 +50,15 @@ To build the lite-node, you’ll need some specific software. Run the following 
     source "$HOME/.cargo/env"
     ```
 
+{% endtabs %}
+
 ## Pre-build
 
 Before we can build the Lotus binaries, we need to follow a few pre-build steps. MacOS users should select their CPU architecture:
 
-### MacOS Intel
+{% tabs tab1="MacOS Intel", tab2="MacOS ARM", tab3="Ubuntu" %}
 
+{% tab1 %}
 1.  Clone the repository and move into the `lotus` directory:
 
     ```shell
@@ -80,8 +83,7 @@ Before we can build the Lotus binaries, we need to follow a few pre-build steps.
     ```
 4. Done! You can move on to the [Build](#build-the-binary) section.
 
-### MacOS ARM
-
+{% tab2 %}
 1.  Clone the repository and move into the `lotus` directory:
 
     ```shell
@@ -113,8 +115,7 @@ Before we can build the Lotus binaries, we need to follow a few pre-build steps.
     ```
 5. Done! You can move on to the [Build](#build-the-binary) section.
 
-### Ubuntu
-
+{% tab3 %}
 1.  Clone the repository and move into the `lotus` directory:
 
     ```shell
@@ -145,12 +146,15 @@ Before we can build the Lotus binaries, we need to follow a few pre-build steps.
     ```
 5. Done! You can move on to the Build section.
 
+{% endtabs %}
+
 ## Build the binary
 
 The last thing we need to do to get our node setup is to build the package. The command you need to run depends on which network you want to connect to:
 
-### Mainnet
+{% tabs tab1="Mainnet", tab2="Calibration" %}
 
+{% tab1 %}
 1.  Remove or delete any existing Lotus configuration files on your system:
 
     ```shell
@@ -174,8 +178,7 @@ The last thing we need to do to get our node setup is to build the package. The 
     lotus version 1.34.1+mainnet+git.1ff3b360b
     ```
 
-### Calibration
-
+{% tab2 %}
 1.  Remove or delete any existing Lotus configuration files on your system:
 
     ```shell
@@ -199,12 +202,15 @@ The last thing we need to do to get our node setup is to build the package. The 
     lotus version 1.34.1+calibnet+git.1ff3b360b
     ```
 
+{% endtabs %}
+
 ## Start the node
 
 Let's start the lite-node by connecting to a remote full-node. We can use the public full-nodes from [glif.io](https://www.glif.io/en):
 
-### Mainnet
+{% tabs tab1="Mainnet", tab2="Calibration" %}
 
+{% tab1 %}
 1.  Create an environment variable called `FULLNODE_API_INFO` and set it to the WebSockets address of the node you want to connect to. At the same time, start the Lotus daemon with the `--lite` tag:
 
     ```shell
@@ -220,8 +226,7 @@ Let's start the lite-node by connecting to a remote full-node. We can use the pu
     ```
 2. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
 
-### Calibration
-
+{% tab2 %}
 1.  Create an environment variable called `FULLNODE_API_INFO` and set it to the WebSockets address of the node you want to connect to. At the same time, start the Lotus daemon with the `--lite` tag:
 
     ```shell
@@ -237,12 +242,15 @@ Let's start the lite-node by connecting to a remote full-node. We can use the pu
     ```
 2. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
 
+{% endtabs %}
+
 ## Expose the API
 
 To send JSON-RPC requests to our lite-node, we need to expose the API.
 
-### Mainnet
+{% tabs tab1="Mainnet", tab2="Calibration" %}
 
+{% tab1 %}
 1.  Open `~/.lotus/config.toml` and uncomment `ListenAddress` on line 6:
 
     ```toml
@@ -274,8 +282,7 @@ To send JSON-RPC requests to our lite-node, we need to expose the API.
     ```
 4. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
 
-### Calibration
-
+{% tab2 %}
 1.  Open `~/.lotus/config.toml` and uncomment `ListenAddress` on line 6:
 
     ```toml
@@ -307,6 +314,8 @@ To send JSON-RPC requests to our lite-node, we need to expose the API.
     ...
     ```
 4. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
+
+{% endtabs %}
 
 The lite-node is now set up to accept local JSON-RPC requests! However, we don't have an authorization key, so we won't have access to privileged JSON-RPC methods.
 
