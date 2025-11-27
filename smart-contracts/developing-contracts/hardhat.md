@@ -57,7 +57,9 @@ yarn install
 PRIVATE_KEY= <YOUR PRIVATE KEY>
 ```
 
-> **Note:** Always be careful when dealing with your private key. Double-check that you're not hardcoding it anywhere or committing it to Git. Remember: anyone with access to your private key has complete control over your funds.
+{% hint style="info" %}
+Always be careful when dealing with your private key. Double-check that you’re not hardcoding it anywhere or committing it to Git. Remember: anyone with access to your private key has complete control over your funds.
+{% endhint %}
 
 4. Get the addresses associated with the private key from Hardhat:
 

@@ -88,7 +88,9 @@ func main() {
 
 2. **retrieving content with Saturn**
 
-> **Note:** [Saturn Javascript Client](https://github.com/filecoin-saturn/js-client) is still a work in progress and not recommended for use in production yet.
+{% hint style="info" %}
+[Saturn Javascript Client](https://github.com/filecoin-saturn/js-client) is still a work in progress and not recommended for use in production yet.
+{% endhint %}
 
 The following code example demonstrates how to use the Saturn in the Javascript program to fetch a CID.
 

@@ -11,7 +11,8 @@ description: >-
 
 ChainID.network is a website that lets users easily connect their wallets to EVM-compatible blockchains. ChainID is the simplest way to add the Filecoin network to your MetaMask wallet.
 
-{% tabs title="Mainnet" %}
+{% tabs %}
+{% tab title="Mainnet" %}
 1. Navigate to [chainid.network](https://chainid.network).
 2. Search for `Filecoin Mainnet`.
 3. Click **Connect Wallet**.
@@ -21,6 +22,7 @@ ChainID.network is a website that lets users easily connect their wallets to EVM
 7. You should see _Filecoin_ listed at the top.
 
 You can now use MetaMask to interact with the Filecoin network.
+{% endtab %}
 
 {% tab title="Calibration" %}
 1. Navigate to [chainid.network](https://chainid.network).
@@ -32,6 +34,7 @@ You can now use MetaMask to interact with the Filecoin network.
 7. Open MetaMask from the browser extensions tab. You should see _Filecoin Calibration_ listed at the top.
 
 You can now use MetaMask to interact with the Filecoin network.
+{% endtab %}
 
 {% tab title="Local testnet" %}
 1. Navigate to [chainid.network](https://chainid.network).
@@ -43,7 +46,7 @@ You can now use MetaMask to interact with the Filecoin network.
 7. Open MetaMask from the browser extensions tab. You should see _Filecoin Local testnet_ listed at the top.
 
 You can now use MetaMask to interact with the Filecoin network.
-
+{% endtab %}
 {% endtabs %}
 
 ## Manual process
@@ -68,30 +71,18 @@ The process for configuring MetaMask to use Filecoin is fairly simple but has so
 5. Scroll down and click **Add a network manually**.
 6. Enter the following information into the fields:
 
-{% tabs title="Mainnet" %}
-| Field | Value |
-|-------|-------|
-| Network name | `Filecoin` |
-| New RPC URL | Either: `https://api.node.glif.io/rpc/v1` or `https://filecoin.chainup.net/rpc/v1` or `https://rpc.ankr.com/filecoin` |
-| Chain ID | `314` |
-| Currency symbol | `FIL` |
+{% tabs %}
+{% tab title="Mainnet" %}
+<table><thead><tr><th width="159">Field</th><th>Value</th></tr></thead><tbody><tr><td>Network name</td><td><code>Filecoin</code></td></tr><tr><td>New RPC URL</td><td>Either:<br>- <code>https://api.node.glif.io/rpc/v1</code><br>- <code>https://filecoin.chainup.net/rpc/v1</code><br>- <code>https://rpc.ankr.com/filecoin</code></td></tr><tr><td>Chain ID</td><td><code>314</code></td></tr><tr><td>Currency symbol</td><td><code>FIL</code></td></tr></tbody></table>
+{% endtab %}
 
 {% tab title="Calibration" %}
-| Field | Value |
-|-------|-------|
-| Network name | `Filecoin Calibration testnet` |
-| New RPC URL | Either: `https://api.calibration.node.glif.io/rpc/v1` or `https://filecoin-calibration.chainup.net/rpc/v1` |
-| Chain ID | `314159` |
-| Currency symbol | `tFIL` |
+<table><thead><tr><th width="176">Field</th><th>Value</th></tr></thead><tbody><tr><td>Network name</td><td><code>Filecoin Calibration testnet</code></td></tr><tr><td>New RPC URL</td><td>Either:<br>- <code>https://api.calibration.node.glif.io/rpc/v1</code><br>- <code>https://filecoin-calibration.chainup.net/rpc/v1</code></td></tr><tr><td>Chain ID</td><td><code>314159</code></td></tr><tr><td>Currency symbol</td><td><code>tFIL</code></td></tr></tbody></table>
+{% endtab %}
 
 {% tab title="Local testnet" %}
-| Field | Value |
-|-------|-------|
-| Network name | `Filecoin Local testnet` |
-| New RPC URL | `http://localhost:1234/rpc/v1` |
-| Chain ID | `31415926` |
-| Currency symbol | `tFIL` |
-
+<table><thead><tr><th width="201">Field</th><th>Value</th></tr></thead><tbody><tr><td>Network name</td><td><code>Filecoin Local testnet</code></td></tr><tr><td>New RPC URL</td><td><code>http://localhost:1234/rpc/v1</code></td></tr><tr><td>Chain ID</td><td><code>31415926</code></td></tr><tr><td>Currency symbol</td><td><code>tFIL</code></td></tr></tbody></table>
+{% endtab %}
 {% endtabs %}
 
 7. Pick one block explorer from the [Networks section](../../networks/mainnet/), and enter the URL into the **Block explorer (optional)** field.

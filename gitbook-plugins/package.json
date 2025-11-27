@@ -1,0 +1,9 @@
+{
+  "name": "gitbook-plugin-gitbook-compat",
+  "version": "1.0.0",
+  "description": "GitBook.com compatibility plugin for gitbook-cli (tabs, embed)",
+  "main": "index.js",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  }
+}

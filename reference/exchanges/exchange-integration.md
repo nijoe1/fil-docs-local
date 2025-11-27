@@ -111,7 +111,9 @@ Some JavaScript libraries attempt to estimate the gas fees before sending the tr
 
 A summary of the Filecoin's EVM differences with Ethereum is available in the [FEVM - Difference with Ethereum section](../../smart-contracts/filecoin-evm-runtime/difference-with-ethereum.md).
 
-> **Warning:** Note that when sending funds to a Filecoin EVM recipient address (f410f or 0x), it is recommended to always use the **InvokeEVM** **method 3844450837** to prevent possible loss of funds in case the recipient is a smart contract. The `lotus send 0x` CLI method always defaults to this method number.
+{% hint style="danger" %}
+Note that when sending funds to a Filecoin EVM recipient address (f410f or 0x), it is recommended to always use the **InvokeEVM** **method 3844450837** to prevent possible loss of funds in case the recipient is a smart contract. The `lotus send 0x` CLI method always defaults to this method number.
+{% endhint %}
 
 
 ## Integration

@@ -102,9 +102,11 @@ C1 doesn’t require much attention for our architecture. C2 however requires a 
 
 Please take a look at the presentation Benjamin Hoejsbo from [PIKNIK](https://www.piknik.com) gave, in which solo storage provider setups are examined. The presentation is from 2022, but the content is still relevant as of March 2023.
 
-[![Solo storage provider setups](https://img.youtube.com/vi/LKMjCgo-fkA/0.jpg)](https://www.youtube.com/watch?v=LKMjCgo-fkA)
+{% embed url="https://www.youtube.com/watch?v=LKMjCgo-fkA" %}
 
-> **Note:** We are working to improve this section. If you would like to share your mining setup, please create an issue in the [Filecoin documentation GitHub repository](https://github.com/filecoin-project/filecoin-docs/issues)!
+{% hint style="info" %}
+We are working to improve this section. If you would like to share your mining setup, please create an issue in the [Filecoin documentation GitHub repository](https://github.com/filecoin-project/filecoin-docs/issues)!
+{% endhint %}
 
 
 

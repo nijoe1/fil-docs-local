@@ -7,7 +7,9 @@ keywords: "calibration testnet, calibnet, Filecoin testnet, test FIL, faucet, st
 
 # Calibration
 
-> **Note:** Also see [Calibration RPCs](rpcs.md) and [Calibration Explorers](explorers.md).
+{% hint style="info" %}
+Also see [Calibration RPCs](rpcs.md) and [Calibration Explorers](explorers.md).
+{% endhint %}
 
 The calibration network is the most realistic testnet simulation of the Filecoin mainnet.
 

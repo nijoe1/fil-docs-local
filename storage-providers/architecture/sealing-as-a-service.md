@@ -28,7 +28,7 @@ Other solutions are possible where the sealing partner seals committed capacity 
 
 See the following video from [Aligned](https://aligned.co/sealing-as-a-service) about their offering of Sealing-as-a-Service:
 
-[![Sealing-as-a-Service](https://img.youtube.com/vi/v4l1lGsUXvs/0.jpg)](https://www.youtube.com/watch?v=v4l1lGsUXvs)
+{% embed url="https://www.youtube.com/watch?v=v4l1lGsUXvs" %}
 
 
 

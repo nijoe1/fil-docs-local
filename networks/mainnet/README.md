@@ -6,7 +6,9 @@ description: >-
 
 # Mainnet
 
-> **Note:** Also see [Mainnet RPCs](rpcs.md) and [Mainnet Explorers](explorers.md).
+{% hint style="info" %}
+Also see [Mainnet RPCs](rpcs.md) and [Mainnet Explorers](explorers.md).
+{% endhint %}
 
 **Maintainer**: [Protocol Labs](https://protocol.ai)
 

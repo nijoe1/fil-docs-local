@@ -1,4 +1,4 @@
 {
-  "plugins": ["tabs"],
+  "plugins": ["gitbook-compat", "hints"],
   "pluginsConfig": {}
 }

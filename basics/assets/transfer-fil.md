@@ -16,9 +16,11 @@ There are four paths for transferring FIL tokens across the Filecoin network, de
 | **To an `0x` address** | [`0x` => `0x` address](https://docs.filecoin.io/basics/assets/transfer-fil/#eth-style-address-to-eth-style-address) | [`f` =>`0x` address](https://docs.filecoin.io/basics/assets/transfer-fil/#filecoin-to-eth-style-address) |
 | **To a `f` address**   | [`0x` => `f` address](https://docs.filecoin.io/basics/assets/transfer-fil/#eth-style-address-to-filecoin)           | [`f` => `f` address](https://docs.filecoin.io/basics/assets/transfer-fil/#filecoin-to-filecoin)          |
 
-> **Warning:** **ASSETS ON THE FILECOIN NETWORK ARE NOT AVAILABLE ON ANY OTHER NETWORK**
->
-> Remember that Filecoin is fully compatible with Ethereum tools, like wallets. But that doesn't mean you're using the Ethereum network. These instructions transfer assets only within the Filecoin network. [Learn how to configure your Ethereum wallet on the Filecoin network](https://docs.filecoin.io/basics/assets/metamask-setup/).
+{% hint style="warning" %}
+**ASSETS ON THE FILECOIN NETWORK ARE NOT AVAILABLE ON ANY OTHER NETWORK**\
+\
+Remember that Filecoin is fully compatible with Ethereum tools, like wallets. But that doesn’t mean you’re using the Ethereum network. These instructions transfer assets only within the Filecoin network. [Learn how to configure your Ethereum wallet on the Filecoin network](https://docs.filecoin.io/basics/assets/metamask-setup/).
+{% endhint %}
 
 ## 0x => 0x address
 
@@ -43,7 +45,9 @@ The process for sending FIL from a Filecoin `f` address to an Ethereum-style `0x
 
 Ledger Live supports sending to a Filecoin `f4` address, which has an automatic `0x` equivalent that you can look up on any [block explorer](../../networks/mainnet/explorers.md). This allows you to directly transfer your FIL to an Ethereum-style `0x` address using its `f4` equivalent.
 
-> **Warning:** Sending directly to a `0x` address does not work in Ledger Live. You must use the `f4` equivalent.
+{% hint style="warning" %}
+Sending directly to a `0x` address does not work in Ledger Live. You must use the `f4` equivalent.
+{% endhint %}
 
 ### Hot wallet
 

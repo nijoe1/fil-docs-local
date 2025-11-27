@@ -8,7 +8,9 @@ description: >-
 
 We’re going to install a browser-based wallet called MetaMask, create a new wallet address, supply some test currency to that wallet, and then use a browser-based development environment called Remix to deploy a smart contract to the Filecoin network. We’re going to be creating an ERC-20 token in this quickstart. The ERC-20 contract is used a lot in representing a massive array of tokens across multiple blockchains, primarily the Ethereum blockchain.
 
-> **Note:** If you're an Ethereum developer, check out the [FEVM Hardhat kit](../developing-contracts/hardhat.md).
+{% hint style="info" %}
+If you’re an Ethereum developer, check out the [FEVM Hardhat kit](../developing-contracts/hardhat.md).
+{% endhint %}
 
 ## Accounts and assets
 

@@ -19,7 +19,9 @@ Data preparation can be done in various ways, depending on your use-case. Here a
 
 See the following video for a demonstration on Singularity:
 
-[![Xinan Xu's presentation on Singularity](https://img.youtube.com/vi/1ZjKxkI6-Ic/0.jpg)](https://www.youtube.com/watch?v=1ZjKxkI6-Ic)
+{% embed url="https://www.youtube.com/watch?v=1ZjKxkI6-Ic" %}
+Xinan Xu's presentation on Singularity
+{% endembed %}
 
 ## Deal Market
 

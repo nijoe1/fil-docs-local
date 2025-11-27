@@ -64,9 +64,11 @@ Calls the specified actor using the native FVM calling convention by its _Fileco
 
 ### Input: ABI Encoded
 
+{% code overflow="wrap" %}
 ```json
 (uint64 method, uint256 value, uint64 flags, uint64 codec, bytes params, bytes filAddress)
 ```
+{% endcode %}
 
 * `method` is the Filecoin method number. The precompile will revert if the method number is not either 0 (bare value transfer) or at least 1024. Methods between 1 and 1023 inclusive are currently restricted (but may be allowed in the future).
 * `value` is the value to transfer in attoFIL.
@@ -91,7 +93,9 @@ Calls the specified actor using the native FVM calling convention by its _Fileco
   * 0x55 - raw (the target actor returned raw data)
   * 0x00 - nothing (the returned data will be empty as well).
 
-> **Warning:** This precompile only reverts if an input is statically invalid. If the precompile fails to call the target actor for any other reason, it will return a non-zero `exit_code` but will not revert.
+{% hint style="danger" %}
+This precompile only reverts if an input is statically invalid. If the precompile fails to call the target actor for any other reason, it will return a non-zero `exit_code` but will not revert.
+{% endhint %}
 
 Example:
 

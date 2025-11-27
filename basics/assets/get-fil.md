@@ -46,7 +46,9 @@ FIL is supported by a number of fiat on-ramps, such as:
 * [Ramp Network](https://ramp.network/)
 * [Simplex](https://www.simplex.com/).
 
-> **Note:** If you know of any other services that can be added to list this, [raise an issue on GitHub](https://github.com/filecoin-project/filecoin-docs/issues/new).
+{% hint style="info" %}
+If you know of any other services that can be added to list this, [raise an issue on GitHub](https://github.com/filecoin-project/filecoin-docs/issues/new).
+{% endhint %}
 
 Users are cautioned to do their own due diligence with respect to choosing a fiat on-ramp provider.
 

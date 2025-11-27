@@ -1,9 +1,0 @@
-{
-  "name": "gitbook-plugin-tabs",
-  "version": "1.0.0",
-  "description": "GitBook tabs plugin compatible with GitBook.com syntax",
-  "main": "index.js",
-  "engines": {
-    "gitbook": ">=3.0.0"
-  }
-}

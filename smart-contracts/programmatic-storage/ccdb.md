@@ -189,7 +189,9 @@ We are already done sending the data from the source chain (e.g., Avalanche) to 
 
 Once the offer is recorded on-chain, the xChain Client and Filecoin storage providers will process the storage deal on Filecoin and send the storage proof back to the source chain (e.g., Avalanche).
 
-> **Note:** Step 3 and 4 explain how the xChain client & Filecoin are handling cross-chain data storage and proofing. Avalanche dApp builders do not need to implement it.
+{% hint style="info" %}
+Step 3 and 4 explain how the xChain client & Filecoin are handling cross-chain data storage and proofing. Avalanche dApp builders do not need to implement it.
+{% endhint %}
 
 ### Step 3: xChain Client Processes the Offer
 

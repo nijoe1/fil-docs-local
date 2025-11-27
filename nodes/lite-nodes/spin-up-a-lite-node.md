@@ -17,15 +17,17 @@ Lite-nodes have relatively lightweight hardware requirements. Your machine shoul
 2. A dual-core CPU.
 3. At least 4 GiB of storage space.
 
-To build the lite-node, you'll need some specific software. Run the following command to install the software prerequisites:
+To build the lite-node, you’ll need some specific software. Run the following command to install the software prerequisites:
 
-{% tabs title="MacOS" %}
+{% tabs %}
+{% tab title="MacOS" %}
 1. Ensure you have [XCode](https://developer.apple.com/xcode/) and [Homebrew](https://brew.sh/) installed.
 2.  Install the following dependencies:
 
     ```shell
     brew install go jq pkg-config hwloc coreutils rust
     ```
+{% endtab %}
 
 {% tab title="Ubuntu" %}
 1.  Install the following dependencies:
@@ -47,14 +49,15 @@ To build the lite-node, you'll need some specific software. Run the following co
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source "$HOME/.cargo/env"
     ```
-
+{% endtab %}
 {% endtabs %}
 
 ## Pre-build
 
-Before we can build the Lotus binaries, we need to follow a few pre-build steps. MacOS users should select their CPU architecture:
+Before we can build the Lotus binaries, we need to follow a few pre-build steps. MacOS users should select their CPU architecture from the tabs:
 
-{% tabs title="MacOS Intel" %}
+{% tabs %}
+{% tab title="MacOS Intel" %}
 1.  Clone the repository and move into the `lotus` directory:
 
     ```shell
@@ -77,7 +80,8 @@ Before we can build the Lotus binaries, we need to follow a few pre-build steps.
     ```shell
     git checkout v1.34.1
     ```
-4. Done! You can move on to the [Build](#build-the-binary) section.
+4. Done! You can move on to the [Build](https://docs.filecoin.io/nodes/lite-nodes/spin-up-a-lite-node/#build-the-binary) section.
+{% endtab %}
 
 {% tab title="MacOS ARM" %}
 1.  Clone the repository and move into the `lotus` directory:
@@ -109,7 +113,8 @@ Before we can build the Lotus binaries, we need to follow a few pre-build steps.
     export FFI_BUILD_FROM_SOURCE=1
     export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
     ```
-5. Done! You can move on to the [Build](#build-the-binary) section.
+5. Done! You can move on to the [Build](https://docs.filecoin.io/nodes/lite-nodes/spin-up-a-lite-node/#build-the-binary) section.
+{% endtab %}
 
 {% tab title="Ubuntu" %}
 1.  Clone the repository and move into the `lotus` directory:
@@ -134,21 +139,22 @@ Before we can build the Lotus binaries, we need to follow a few pre-build steps.
     ```shell
     git checkout v1.34.1
     ```
-4.  If your processor was released later than an AMD Zen or Intel Ice Lake CPU, enable SHA extensions by adding these two environment variables. If in doubt, ignore this command and move on to [the next section](#build-the-binary).
+4.  If your processor was released later than an AMD Zen or Intel Ice Lake CPU, enable SHA extensions by adding these two environment variables. If in doubt, ignore this command and move on to [the next section](https://docs.filecoin.io/nodes/lite-nodes/spin-up-a-lite-node/#build-the-binary).
 
     ```shell
     export RUSTFLAGS="-C target-cpu=native -g"
     export FFI_BUILD_FROM_SOURCE=1
     ```
 5. Done! You can move on to the Build section.
-
+{% endtab %}
 {% endtabs %}
 
 ## Build the binary
 
 The last thing we need to do to get our node setup is to build the package. The command you need to run depends on which network you want to connect to:
 
-{% tabs title="Mainnet" %}
+{% tabs %}
+{% tab title="Mainnet" %}
 1.  Remove or delete any existing Lotus configuration files on your system:
 
     ```shell
@@ -171,6 +177,7 @@ The last thing we need to do to get our node setup is to build the package. The 
     ```plaintext
     lotus version 1.34.1+mainnet+git.1ff3b360b
     ```
+{% endtab %}
 
 {% tab title="Calibration" %}
 1.  Remove or delete any existing Lotus configuration files on your system:
@@ -195,14 +202,15 @@ The last thing we need to do to get our node setup is to build the package. The 
     ```plaintext
     lotus version 1.34.1+calibnet+git.1ff3b360b
     ```
-
+{% endtab %}
 {% endtabs %}
 
 ## Start the node
 
 Let's start the lite-node by connecting to a remote full-node. We can use the public full-nodes from [glif.io](https://www.glif.io/en):
 
-{% tabs title="Mainnet" %}
+{% tabs %}
+{% tab title="Mainnet" %}
 1.  Create an environment variable called `FULLNODE_API_INFO` and set it to the WebSockets address of the node you want to connect to. At the same time, start the Lotus daemon with the `--lite` tag:
 
     ```shell
@@ -217,6 +225,7 @@ Let's start the lite-node by connecting to a remote full-node. We can use the pu
     ...
     ```
 2. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
+{% endtab %}
 
 {% tab title="Calibration" %}
 1.  Create an environment variable called `FULLNODE_API_INFO` and set it to the WebSockets address of the node you want to connect to. At the same time, start the Lotus daemon with the `--lite` tag:
@@ -233,14 +242,15 @@ Let's start the lite-node by connecting to a remote full-node. We can use the pu
     ...
     ```
 2. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
-
+{% endtab %}
 {% endtabs %}
 
 ## Expose the API
 
 To send JSON-RPC requests to our lite-node, we need to expose the API.
 
-{% tabs title="Mainnet" %}
+{% tabs %}
+{% tab title="Mainnet" %}
 1.  Open `~/.lotus/config.toml` and uncomment `ListenAddress` on line 6:
 
     ```toml
@@ -271,6 +281,7 @@ To send JSON-RPC requests to our lite-node, we need to expose the API.
     ...
     ```
 4. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
+{% endtab %}
 
 {% tab title="Calibration" %}
 1.  Open `~/.lotus/config.toml` and uncomment `ListenAddress` on line 6:
@@ -304,7 +315,7 @@ To send JSON-RPC requests to our lite-node, we need to expose the API.
     ...
     ```
 4. The Lotus daemon will continue to run in this terminal window. All subsequent commands we use should be done in a separate terminal window.
-
+{% endtab %}
 {% endtabs %}
 
 The lite-node is now set up to accept local JSON-RPC requests! However, we don't have an authorization key, so we won't have access to privileged JSON-RPC methods.

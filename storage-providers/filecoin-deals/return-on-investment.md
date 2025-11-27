@@ -24,7 +24,7 @@ Calculating the ROI of your storage provider business is important. Check out th
 
 For more information and context see the following video:
 
-[![Storage Provider ROI](https://img.youtube.com/vi/zboAgawHT-o/0.jpg)](https://www.youtube.com/watch?v=zboAgawHT-o)
+{% embed url="https://www.youtube.com/watch?v=zboAgawHT-o" %}
 
 It takes more variables than the cost vs. the income. In summary, the factors that influence your ROI are:
 

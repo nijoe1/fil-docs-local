@@ -17,7 +17,7 @@ In this walkthrough, you’ll build a simple drag-and-drop file uploader that:
 
 ## Walkthrough Recording 
 
-[![Watch the walkthrough](https://img.youtube.com/vi/UElx1_qF12o/0.jpg)](https://www.youtube.com/watch?v=UElx1_qF12o)
+{% embed url="https://www.youtube.com/embed/UElx1_qF12o?si=ppmzrl6psMRqwNQh" %}
 
 ## Setup
 

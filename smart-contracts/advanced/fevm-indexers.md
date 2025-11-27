@@ -132,7 +132,9 @@ Just as with database data queried through SQL, subgraphs have to be stored some
    * If you have created a key, you will see one The Graph subscription pending.
    * Click **Pay** and proceed with providing your credit card details to activate a free subscription.
 
-> **Warning:** Glif Nodes currently offers this service completely **free of charge**. If this ever changes, you will be notified at least one month in advance. It is recommended to provide your contact details on the Glif Nodes website to receive updates. Credit card details are used solely for DDoS protection. No charges will be made without prior notification.
+{% hint style="warning" %}
+Glif Nodes currently offers this service completely **free of charge**. If this ever changes, you will be notified at least one month in advance. It is recommended to provide your contact details on the Glif Nodes website to receive updates. Credit card details are used solely for DDoS protection. No charges will be made without prior notification.
+{% endhint %}
 
 4. **Create a Subgraph**
    * Switch back to the **Subgraphs** tab.

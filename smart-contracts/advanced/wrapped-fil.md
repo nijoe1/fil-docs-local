@@ -12,7 +12,9 @@ Wrapped FIL operates like any other ERC20-wrapped native blockchain token: a use
 
 Overall, wFIL provides additional liquidity and interoperability for FIL tokens, making the Filecoin network more accessible for a broader range of decentralized finance (defi) use cases across multiple blockchains.
 
-> **Warning:** When wrapping and unwrapping FIL ensure you are using the correct wFIL contract address on Filecoin.
+{% hint style="danger" %}
+When wrapping and unwrapping FIL ensure you are using the correct wFIL contract address on Filecoin.
+{% endhint %}
 
 ### Wrapped FIL contract addresses
 

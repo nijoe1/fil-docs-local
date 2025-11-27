@@ -15,7 +15,9 @@ Filecoin charges Filecoin gas only. This includes the Filecoin EVM runtime. Inst
    1. Some instructions may be more expensive and/or cheaper in Filecoin EVM runtime than they are in the EVM.
    2. EVM instruction costs can depend on the exact Filecoin EVM runtime code-paths taken, and caching.
 
-> **Warning:** Filecoin gas costs are not set in stone and should never be hard-coded. Future network upgrades will break any smart contracts that depend on gas costs not changing.
+{% hint style="danger" %}
+Filecoin gas costs are not set in stone and should never be hard-coded. Future network upgrades will break any smart contracts that depend on gas costs not changing.
+{% endhint %}
 
 ## Gas stipend
 

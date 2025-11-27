@@ -6,7 +6,9 @@ description: >-
 
 # Storage provider automation
 
-> **Note:** [Find the automation code here!](https://github.com/filecoin-project/sp-automation)
+{% hint style="info" %}
+[Find the automation code here!](https://github.com/filecoin-project/sp-automation)
+{% endhint %}
 
 ## Why this automation?
 

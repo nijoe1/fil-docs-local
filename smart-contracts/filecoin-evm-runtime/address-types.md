@@ -156,7 +156,9 @@ Addresses starting with `f410f` address can be converted to the `0x` format by:
 * Assert that the remaining address is 20 bytes long.
 * Hex-encode: `sprintf(0x%040x", actor_id)`.
 
-> **Warning:** `f0` addresses are **not** re-org stable and should not be used until the chain has settled.
+{% hint style="danger" %}
+`f0` addresses are **not** re-org stable and should not be used until the chain has settled.
+{% endhint %}
 
 ### Converting to a Filecoin Address
 

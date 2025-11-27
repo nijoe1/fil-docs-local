@@ -6,15 +6,19 @@ description: >-
 
 # Install & Run PDP
 
-> **Warning:** **ALPHA FEATURE - UNDER DEVELOPMENT**
->
-> This documentation covers the PDP (Proof of Data Possession) feature, which is currently in alpha and under active development. This tool is intended for testing and experimental use only.
->
-> For production use and submitting real deals with live PDP Storage Providers, please use the [Synapse SDK](https://github.com/FilOzone/synapse-sdk).
+{% hint style="danger" %}
+**ALPHA FEATURE - UNDER DEVELOPMENT**
+
+This documentation covers the PDP (Proof of Data Possession) feature, which is currently in alpha and under active development. This tool is intended for testing and experimental use only.
+
+For production use and submitting real deals with live PDP Storage Providers, please use the [Synapse SDK](https://github.com/FilOzone/synapse-sdk).
+{% endhint %}
 
 ## 🚀 Prerequisites
 
-> **Warning:** **Note:** This guide is written specifically for **Ubuntu 22.04**. If you are using a different Linux distribution, refer to the relevant documentation for package installation and compatibility.
+{% hint style="warning" %}
+**Note:** This guide is written specifically for **Ubuntu 22.04**. If you are using a different Linux distribution, refer to the relevant documentation for package installation and compatibility.
+{% endhint %}
 
 Before starting, make sure you have a user with **sudo privileges**. This section prepares your system for the PDP stack.
 
@@ -53,7 +57,9 @@ source ~/.bashrc
 go version
 ```
 
-> **Tip:** You should see something like: `go version go1.23.7 linux/amd64`
+{% hint style="success" %}
+You should see something like: `go version go1.23.7 linux/amd64`
+{% endhint %}
 
 ***
 
@@ -63,14 +69,18 @@ go version
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-> **Note:** When prompted, choose the option 1) Proceed with standard installation (default — just press Enter).
+{% hint style="info" %}
+When prompted, choose the option 1) Proceed with standard installation (default — just press Enter).
+{% endhint %}
 
 ```sh
 source $HOME/.cargo/env
 rustc --version
 ```
 
-> **Tip:** You should see something like: `rustc 1.86.0 (05f9846f8 2025-03-31)`
+{% hint style="success" %}
+You should see something like: `rustc 1.86.0 (05f9846f8 2025-03-31)`
+{% endhint %}
 
 ***
 
@@ -116,7 +126,9 @@ sudo make install-daemon
 lotus --version
 ```
 
-> **Tip:** You should see something like: `lotus version 1.32.2+calibnet+git.ff88d8269`
+{% hint style="success" %}
+You should see something like: `lotus version 1.32.2+calibnet+git.ff88d8269`
+{% endhint %}
 
 ***
 
@@ -143,7 +155,9 @@ lotus daemon --import-snapshot snapshot.car.zst --remove-existing-chain --halt-a
 nohup lotus daemon > ~/lotus.log 2>&1 &
 ```
 
-> **Note:** If you encounter errors related to `EnableEthRPC` or `EnableIndexer`, run the following command and restart Lotus
+{% hint style="info" %}
+If you encounter errors related to `EnableEthRPC` or `EnableIndexer`, run the following command and restart Lotus
+{% endhint %}
 
 ```sh
 sed -i 's/^\( *\)#*EnableEthRPC = .*/\1EnableEthRPC = true/; s/^\( *\)#*EnableIndexer = .*/\1EnableIndexer = true/' ~/.lotus/config.toml
@@ -177,7 +191,9 @@ tail -f ~/lotus.log
 
 ### 🛠 Set ulimit configuration
 
-> **Warning:** Before starting Yugabyte, you must increase the default `ulimit` values to ensure system limits do not interfere with the database.
+{% hint style="warning" %}
+Before starting Yugabyte, you must increase the default `ulimit` values to ensure system limits do not interfere with the database.
+{% endhint %}
 
 To do this:
 
@@ -204,7 +220,9 @@ Verify:
 ulimit -n
 ```
 
-> **Tip:** This should output `1048576`.
+{% hint style="success" %}
+This should output `1048576`.
+{% endhint %}
 
 ### ⚙️ Install Yugabyte
 
@@ -224,15 +242,21 @@ cd yugabyte-2.25.1.0
   --tserver_flags rpc_bind_addresses=127.0.0.1
 ```
 
-> **Warning:** If you encounter locale-related errors when starting Yugabyte for the first time, run:
+{% hint style="warning" %}
+If you encounter locale-related errors when starting Yugabyte for the first time, run:
+{% endhint %}
 
 ```sh
 sudo locale-gen en_US.UTF-8
 ```
 
-> **Tip:** Visit `http://127.0.0.1:15433` to confirm successful installation. This is the YugabyteDB web UI — it should display the dashboard if the service is running correctly and all nodes are healthy.
+{% hint style="success" %}
+Visit `http://127.0.0.1:15433` to confirm successful installation. This is the YugabyteDB web UI — it should display the dashboard if the service is running correctly and all nodes are healthy.
+{% endhint %}
 
-> **Note:** You can also check your Yugabyte cluster details directly in the CLI with:
+{% hint style="info" %}
+You can also check your Yugabyte cluster details directly in the CLI with:
+{% endhint %}
 
 ```sh
 ./bin/yugabyted status
@@ -272,7 +296,9 @@ cd curio
 git checkout pdpM3d
 ```
 
-> **Note:** Curio is compiled for a specific Filecoin network at build time. Choose the appropriate build command below.
+{% hint style="info" %}
+Curio is compiled for a specific Filecoin network at build time. Choose the appropriate build command below.
+{% endhint %}
 
 Mainnet
 
@@ -286,7 +312,9 @@ Calibration
 make clean calibnet
 ```
 
-> **Note:** This step will take a few minutes to complete.
+{% hint style="info" %}
+This step will take a few minutes to complete.
+{% endhint %}
 
 ### ✅ Install and Verify Curio
 
@@ -399,7 +427,9 @@ curio cli storage attach --init --seal /fast-storage/path
 curio cli storage attach --init --store /long-term-storage/path
 ```
 
-> **Note:** Your fast-storage path should point to high-performance storage media such as NVMe or SSD
+{% hint style="info" %}
+Your fast-storage path should point to high-performance storage media such as NVMe or SSD
+{% endhint %}
 
 ***
 
@@ -409,7 +439,9 @@ Browse to the **Configurations** page of the Curio GUI.
 
 Create a new layer named **pdp** and enable the following under Subsystems:
 
-> **Note:** You may find it helpful to search for the setting names in your browser.
+{% hint style="info" %}
+You may find it helpful to search for the setting names in your browser.
+{% endhint %}
 
 * ✅ `EnableParkPiece`
 * ✅ `EnablePDP`
@@ -422,13 +454,17 @@ In the **HTTP** section:
 * 🌐 DomainName: `your domain (e.g., pdp.mydomain.com)`
 * 📡 ListenAddress: `0.0.0.0:443`
 
-> **Note:** **Tip:** You must point your domain's A record to your server's public IP address for Let's Encrypt to issue a certificate.
+{% hint style="info" %}
+**Tip:** You must point your domain's A record to your server's public IP address for Let's Encrypt to issue a certificate.
+{% endhint %}
 
 ***
 
 ### 💰 Import your Filecoin Wallet Private Key:
 
-> **Warning:** There are several ways to obtain private keys for Ethereum addresses. In this guide, we will use a new delegated FIL wallet address.
+{% hint style="warning" %}
+There are several ways to obtain private keys for Ethereum addresses. In this guide, we will use a new delegated FIL wallet address.
+{% endhint %}
 
 Create a new delegated wallet:
 
@@ -441,7 +477,9 @@ lotus wallet new delegated
 t410fuo4dghaeiqzokiqnxruzdr6e3cjktnxprrc56bi
 ```
 
-> **Note:** You can display your Lotus wallets at any time by running:
+{% hint style="info" %}
+You can display your Lotus wallets at any time by running:
+{% endhint %}
 
 ```sh
 lotus wallet list
@@ -464,11 +502,15 @@ Browse to the **PDP** page of the Curio GUI and in the **Owner Address** section
 * Copy the previously generated private wallet key into the **Private Key (Hex)** field.
 * Select **Import Key**
 
-> **Tip:** Your 0x wallet address - the delegated Ethereum address derived from your Filecoin delegated wallet private key - will be added to the **Owner Address** section of the Curio PDP page.
+{% hint style="success" %}
+Your 0x wallet address - the delegated Ethereum address derived from your Filecoin delegated wallet private key - will be added to the **Owner Address** section of the Curio PDP page.
+{% endhint %}
 
 Make sure to send a small amount of FIL or tFIL (testnet FIL) to your 0x wallet - we recommend 8 FIL for Mainnet & 5 tFIL for Calibration to ensure uninterrupted PDP operation during initial setup and testing. [Calibration test FIL faucet information](https://docs.filecoin.io/smart-contracts/developing-contracts/get-test-tokens).
 
-> **Warning:** **Important:** Secure your private key material. Don't expose or store it in plain text without protection.
+{% hint style="warning" %}
+**Important:** Secure your private key material. Don't expose or store it in plain text without protection.
+{% endhint %}
 
 ***
 
@@ -480,13 +522,17 @@ Restart Curio with both layers:
 curio run --layers=gui,pdp
 ```
 
-> **Note:** If you encounter errors related to `EnableEthRPC` or `EnableIndexer`, run the following command and restart Lotus
+{% hint style="info" %}
+If you encounter errors related to `EnableEthRPC` or `EnableIndexer`, run the following command and restart Lotus
+{% endhint %}
 
 ```sh
 sed -i 's/^\( *\)#*EnableEthRPC = .*/\1EnableEthRPC = true/; s/^\( *\)#*EnableIndexer = .*/\1Enabl
 ```
 
-> **Note:** If you encounter errors binding to port 443 when starting Curio with the pdp configuration layer, run:
+{% hint style="info" %}
+If you encounter errors binding to port 443 when starting Curio with the pdp configuration layer, run:
+{% endhint %}
 
 ```sh
 sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/curio
@@ -494,7 +540,9 @@ sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/curio
 
 Test the PDP service:
 
-> **Note:** If `pdptool` is not installed, clone and build Curio:
+{% hint style="info" %}
+If `pdptool` is not installed, clone and build Curio:
+{% endhint %}
 
 ```sh
 git clone https://github.com/filecoin-project/curio.git
@@ -512,9 +560,13 @@ Generate a service secret:
 ./pdptool ping --service-url https://your-domain.com --service-name public
 ```
 
-> **Note:** Always use `public` for the `--service-name` flag
+{% hint style="info" %}
+Always use `public` for the `--service-name` flag
+{% endhint %}
 
-> **Tip:** Expected output:
+{% hint style="success" %}
+Expected output:
+{% endhint %}
 
 ```sh
 Ping successful: Service is reachable and JWT token is valid.

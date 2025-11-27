@@ -5,7 +5,9 @@ description: >-
 
 # Call built-in actors
 
-> **Note:** For conceptual information on built-in actors, including their purposes, how they work and available types, see the [conceptual guide](../../reference/built-in-actors/)
+{% hint style="info" %}
+For conceptual information on built-in actors, including their purposes, how they work and available types, see the [conceptual guide](../../reference/built-in-actors/)
+{% endhint %}
 
 Built-in actors can be invoked using the Protocol _JSON-RPC_ API or the Zondax _filecoin.sol_ API.
 
@@ -220,7 +222,9 @@ The `filecoin.sol` library is embeddable into your smart contract, which means i
 yarn add @zondax/filecoin.sol
 ```
 
-> **Note:** Until mid-2023, Zondax was the legacy maintainer of Filecoin.sol. Protocol Labs took over the project, and are in the process of moving NPM packages over to the `protocollabs` NPM account.
+{% hint style="info" %}
+Until mid-2023, Zondax was the legacy maintainer of Filecoin.sol. Protocol Labs took over the project, and are in the process of moving NPM packages over to the `protocollabs` NPM account.
+{% endhint %}
 
 #### **Import filecoin.sol manually**
 

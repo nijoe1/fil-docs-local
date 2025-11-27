@@ -13,7 +13,9 @@ Two paths are available:
 * **Website:** Upload files in your browser. Uses a pre-funded test wallet.
 * **CLI:** Upload files from your terminal. Fund storage from your own wallet.
 
-> **Note:** Both run on Calibration testnet. They use tFIL and USDFC. Data has no persistence guarantees while on Calibnet.
+{% hint style="info" %}
+Both run on Calibration testnet. They use tFIL and USDFC. Data has no persistence guarantees while on Calibnet.
+{% endhint %}
 
 ***
 
@@ -28,7 +30,9 @@ Two paths are available:
 * **Website:** The demo wallet handles payments. It has been prefunded with testnet USDFC and FIL. Users don't need to connect their own wallet.
 * **CLI:** Your test wallet handles payments. You approve and deposit funds through Filecoin Pay.
 
-> **Note:** Storage providers receive payment after cryptographically proving data possession.
+{% hint style="info" %}
+Storage providers receive payment after cryptographically proving data possession.
+{% endhint %}
 
 ***
 
@@ -36,7 +40,9 @@ Two paths are available:
 
 Use `--auto-fund` when uploading. The CLI calculates storage costs automatically. It deposits the right amount of USDFC to your payment rail.
 
-> **Note:** No manual deposit calculations needed. The system handles it.
+{% hint style="info" %}
+No manual deposit calculations needed. The system handles it.
+{% endhint %}
 
 ***
 
@@ -72,7 +78,9 @@ Three methods:
 
 **Piece CID** (bafkzci...) is the Filecoin commitment. Storage Providers prove they store this piece.
 
-> **Note:** Both are linked cryptographically on-chain.
+{% hint style="info" %}
+Both are linked cryptographically on-chain.
+{% endhint %}
 
 ***
 
@@ -83,7 +91,9 @@ Two ways to verify:
 1. **CLI:** Run `filecoin-pin data-set <id>` to see on-chain verification. Check proof status and piece details.
 2. **PDP Explorer:** Visit `https://pdp.vxb.ai/calibration/dataset/{datasetID}` to view proofs in your browser.
 
-> **Note:** Both methods show CommP and proof state directly from blockchain state.
+{% hint style="info" %}
+Both methods show CommP and proof state directly from blockchain state.
+{% endhint %}
 
 ***
 

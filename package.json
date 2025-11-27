@@ -8,7 +8,8 @@
     "update-versions": "node update-versions.js",
     "build": "./build.sh build",
     "serve": "./build.sh serve",
-    "serve:port": "./build.sh serve"
+    "serve:port": "./build.sh serve",
+    "stop": "./build.sh stop"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
     "url": "https://github.com/filecoin-project/filecoin-docs/issues"
   },
   "homepage": "https://github.com/filecoin-project/filecoin-docs#readme",
-  "devDependencies": {
-    "gitbook-plugin-tabs": "file:./gitbook-plugin-tabs"
+  "dependencies": {
+    "gitbook-plugin-hints": "^1.0.2",
+    "gitbook-plugin-gitbook-compat": "file:./gitbook-plugins"
   }
 }

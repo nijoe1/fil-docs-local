@@ -39,7 +39,9 @@ As PC1 is CPU-bound and PC2 is GPU-bound, this is another good reason to separat
 
 Another rule of thumb is to have two PC2 workers for every PC1 worker in your setup. The _WaitSeed_ phase occurs after PC2, which locks the scratch space for a sector until C1 and C2. In order to keep sealing sectors in PC1, PC2 must have sufficient capacity. You can easily host multiple PC2 workers on a single server though, ideally with separate GPU's.
 
-> **Note:** You can run multiple lotus-workers on the same GPU by splitting out their`tmp`folders. Give the environment variable `TMPDIR=<folder>`to the lotus-worker.
+{% hint style="info" %}
+You can run multiple lotus-workers on the same GPU by splitting out their`tmp`folders. Give the environment variable `TMPDIR=<folder>`to the lotus-worker.
+{% endhint %}
 
 ### Scaling out
 

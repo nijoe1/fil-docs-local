@@ -21,11 +21,12 @@ The nodes we’re going to run have relatively lightweight hardware requirements
 
 ## Steps
 
-To build the nodes, you'll need some specific software. Run the following command to install the software prerequisites:
+To build the nodes, you’ll need some specific software. Run the following command to install the software prerequisites:
 
-{% tabs title="MacOS" %}
+{% tabs %}
+{% tab title="MacOS" %}
 1. Open a terminal window.
-2.  Check that you have [Homebrew](https://brew.sh/) installed.
+2.  Check that you have [Homebrew](https://brew.sh/) installed.\\
 
     ```shell
     brew --version
@@ -34,8 +35,9 @@ To build the nodes, you'll need some specific software. Run the following comman
     # ...
     ```
 
+    \
     If you do not see a version number. or receive an error message, install [Homebrew](https://brew.sh/).
-3.  Ensure you have [XCode](https://developer.apple.com/xcode/) installed.
+3.  Ensure you have [XCode](https://developer.apple.com/xcode/) installed.\\
 
     ```shell
     xcode-select -p
@@ -43,41 +45,43 @@ To build the nodes, you'll need some specific software. Run the following comman
     # /Library/Developer/CommandLineTools
     ```
 
+    \
     If you do not see the output above. or receive an error message, install [XCode](https://developer.apple.com/xcode/).
-4.  Install the following dependencies:
+4.  Install the following dependencies:\\
 
     ```shell
     brew install go bzr jq pkg-config hwloc coreutils
     ```
-5.  Install Rust:
+5.  Install Rust:\\
 
     ```shell
     curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 
     # ...
-    # Rust is installed now. Great!
+    # Rust is installed now. Great!    
     # ...
     ```
-6.  Source the `~/.cargo/env` config file:
+6.  Source the `~/.cargo/env` config file:\\
 
     ```shell
     source "$HOME/.cargo/env"
     ```
+{% endtab %}
 
 {% tab title="Ubuntu" %}
-1.  Install the following dependencies:
+1.  Install the following dependencies:\\
 
     ```shell
     sudo apt update -y
     sudo apt install mesa-opencl-icd ocl-icd-opencl-dev gcc git bzr jq pkg-config curl clang build-essential hwloc libhwloc-dev wget -y
     ```
-2.  Install Go and add `/usr/local/go/bin` to your `$PATH` variable:
+2.  Install Go and add `/usr/local/go/bin` to your `$PATH` variable:\\
 
     ```shell
     wget -c https://golang.org/dl/go1.18.8.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
     ```
-3. You may need to export `/usr/local/go/bin` to your `$PATH`. This process changes depending on which shell you're using:
+3. You may need to export `/usr/local/go/bin` to your `$PATH`. This process changes depending on which shell you’re using:
 
 | Shell | Export to $PATH example                                                       |
 | ----- | ----------------------------------------------------------------------------- |
@@ -91,71 +95,75 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 source "$HOME/.cargo/env"
 ```
 
-5. Done! You can move on to the [Pre-build](#pre-build) section.
-
+5. Done! You can move on to the [Pre-build](https://docs.filecoin.io/networks/local-testnet/set-up/#pre-build) section.
+{% endtab %}
 {% endtabs %}
 
 ### Pre-build
 
-Before we can build the Lotus binaries, there's some setup we need to do. We'll create the executable binaries within a new `~/lotus-devnet`.
+Before we can build the Lotus binaries, there’s some setup we need to do. We’ll create the executable binaries within a new `~/lotus-devnet`.
 
-{% tabs title="MacOS Intel" %}
-1.  Clone the repository:
+{% tabs %}
+{% tab title="MacOS Intel" %}
+1.  Clone the repository:\\
 
     ```shell
     git clone https://github.com/filecoin-project/lotus.git ~/lotus-devnet
     cd lotus
     ```
-2.  Checkout to the latest stable branch:
+2.  Checkout to the latest stable branch:\\
 
     ```shell
     git checkout releases
     ```
-3. Done! You can move on to the [Build](#build) section.
+3. Done! You can move on to the [Build](https://docs.filecoin.io/networks/local-testnet/set-up/#build) section.
+{% endtab %}
 
 {% tab title="MacOS ARM" %}
-1.  Clone the repository into a new `~/lotus-devnet` directory:
+1.  Clone the repository into a new `~/lotus-devnet` directory:\\
 
     ```shell
     git clone https://github.com/filecoin-project/lotus.git ~/lotus-devnet
     cd ~/lotus-devnet
     ```
-2.  Checkout to the latest stable branch:
+2.  Checkout to the latest stable branch:\\
 
     ```shell
     git checkout releases
     ```
-3.  Create the necessary environment variables to allow Lotus to run on M1 architecture:
+3.  Create the necessary environment variables to allow Lotus to run on M1 architecture:\\
 
     ```shell
     export LIBRARY_PATH=/opt/homebrew/lib
     export FFI_BUILD_FROM_SOURCE=1
     export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
     ```
-4. Done! You can move on to the [Build](#build) section.
+4. Done! You can move on to the [Build](https://docs.filecoin.io/networks/local-testnet/set-up/#build) section.
+{% endtab %}
 
 {% tab title="Ubuntu" %}
-1.  Clone the repository into a new `~/lotus-devnet` directory:
+1.  Clone the repository into a new `~/lotus-devnet` directory:\\
 
     ```shell
     git clone https://github.com/filecoin-project/lotus.git ~/lotus-devnet
     cd ~/lotus-devnet
     ```
-2.  Checkout to the latest stable branch:
+2.  Checkout to the latest stable branch:\\
 
     ```shell
     git checkout releases
     ```
-3.  If your processor was released later than an AMD Zen or Intel Ice Lake CPU, enable the use of SHA extensions by adding these two environment variables:
+3.  If your processor was released later than an AMD Zen or Intel Ice Lake CPU, enable the use of SHA extensions by adding these two environment variables:\\
 
     ```shell
     export RUSTFLAGS="-C target-cpu=native -g"
     export FFI_BUILD_FROM_SOURCE=1
     ```
 
-    If in doubt, ignore this command and move on to [the next section](#build).
-4. Done! You can move on to the [Build](#build) section.
-
+    \
+    If in doubt, ignore this command and move on to [the next section](https://docs.filecoin.io/networks/local-testnet/set-up/#build).
+4. Done! You can move on to the [Build](https://docs.filecoin.io/networks/local-testnet/set-up/#build) section.
+{% endtab %}
 {% endtabs %}
 
 ### Build
@@ -206,13 +214,15 @@ Before we can build the Lotus binaries, there's some setup we need to do. We'll 
     \
     This will output something like:\\
 
+    {% raw %}
     ```plaintext
-    sector-id: {​{1000 1} 5}, piece info: {2048 baga6ea4seaqf7ovs6euxa4ktencg2gza7lua32l2ugqu76uqgvnjocek6gtoufi}
-    2023-01-31T10:49:46.562-0400    WARN    preseal seed/seed.go:175        PreCommitOutput: {​{1000 1} 5} bagboea4b5abcamxkzmzcciabqqk3xuuvj3k23nfuojboopyw3kg2mblhj6mzipii baga6ea4seaqf7ovs6euxa4ktencg2gza7lua32l2ugqu76uqgvnjocek6gtoufi
+    sector-id: {{1000 1} 5}, piece info: {2048 baga6ea4seaqf7ovs6euxa4ktencg2gza7lua32l2ugqu76uqgvnjocek6gtoufi}
+    2023-01-31T10:49:46.562-0400    WARN    preseal seed/seed.go:175        PreCommitOutput: {{1000 1} 5} bagboea4b5abcamxkzmzcciabqqk3xuuvj3k23nfuojboopyw3kg2mblhj6mzipii baga6ea4seaqf7ovs6euxa4ktencg2gza7lua32l2ugqu76uqgvnjocek6gtoufi
     2023-01-31T10:49:46.562-0400    WARN    preseal seed/seed.go:100        PeerID not specified, generating dummy
 
     ...
     ```
+    {% endraw %}
 4.  Create the genesis block:\\
 
     ```shell

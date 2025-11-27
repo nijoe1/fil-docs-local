@@ -49,7 +49,9 @@ First, let’s grab the kit and set up the development environment.
     ```
 4. Within the `.env` file, replace the example private key with your actual private key. If you are using Metamask, follow [this tutorial to get your private key](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/).
 
-> **Note:** Take precautions and never share your private key with anyone! Also make sure to not check your private key into Git. The `.gitignore` of the Hardhat kit is already set to ignore `.env` files.
+{% hint style="info" %}
+Take precautions and never share your private key with anyone! Also make sure to not check your private key into Git. The `.gitignore` of the Hardhat kit is already set to ignore `.env` files.
+{% endhint %}
 
 5.  Deploy the contracts with `hardhat`:
 
