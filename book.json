@@ -1,3 +1,4 @@
 {
-  "plugins": ["mdtabs"]
+  "plugins": ["tabs"],
+  "pluginsConfig": {}
 }
