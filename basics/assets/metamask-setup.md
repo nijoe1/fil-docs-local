@@ -11,9 +11,7 @@ description: >-
 
 ChainID.network is a website that lets users easily connect their wallets to EVM-compatible blockchains. ChainID is the simplest way to add the Filecoin network to your MetaMask wallet.
 
-{% tabs tab1="Mainnet", tab2="Calibration", tab3="Local testnet" %}
-
-{% tab1 %}
+{% mdtabs title="Mainnet" %}
 1. Navigate to [chainid.network](https://chainid.network).
 2. Search for `Filecoin Mainnet`.
 3. Click **Connect Wallet**.
@@ -24,7 +22,7 @@ ChainID.network is a website that lets users easily connect their wallets to EVM
 
 You can now use MetaMask to interact with the Filecoin network.
 
-{% tab2 %}
+{% mdtab title="Calibration" %}
 1. Navigate to [chainid.network](https://chainid.network).
 2. Search for `Filecoin Calibration`.
 3. Click **Connect Wallet**.
@@ -35,7 +33,7 @@ You can now use MetaMask to interact with the Filecoin network.
 
 You can now use MetaMask to interact with the Filecoin network.
 
-{% tab3 %}
+{% mdtab title="Local testnet" %}
 1. Navigate to [chainid.network](https://chainid.network).
 2. Search for `Filecoin Local testnet`.
 3. Click **Connect Wallet**.
@@ -46,7 +44,7 @@ You can now use MetaMask to interact with the Filecoin network.
 
 You can now use MetaMask to interact with the Filecoin network.
 
-{% endtabs %}
+{% endmdtabs %}
 
 ## Manual process
 
@@ -70,9 +68,7 @@ The process for configuring MetaMask to use Filecoin is fairly simple but has so
 5. Scroll down and click **Add a network manually**.
 6. Enter the following information into the fields:
 
-{% tabs tab1="Mainnet", tab2="Calibration", tab3="Local testnet" %}
-
-{% tab1 %}
+{% mdtabs title="Mainnet" %}
 | Field | Value |
 |-------|-------|
 | Network name | `Filecoin` |
@@ -80,7 +76,7 @@ The process for configuring MetaMask to use Filecoin is fairly simple but has so
 | Chain ID | `314` |
 | Currency symbol | `FIL` |
 
-{% tab2 %}
+{% mdtab title="Calibration" %}
 | Field | Value |
 |-------|-------|
 | Network name | `Filecoin Calibration testnet` |
@@ -88,7 +84,7 @@ The process for configuring MetaMask to use Filecoin is fairly simple but has so
 | Chain ID | `314159` |
 | Currency symbol | `tFIL` |
 
-{% tab3 %}
+{% mdtab title="Local testnet" %}
 | Field | Value |
 |-------|-------|
 | Network name | `Filecoin Local testnet` |
@@ -96,7 +92,7 @@ The process for configuring MetaMask to use Filecoin is fairly simple but has so
 | Chain ID | `31415926` |
 | Currency symbol | `tFIL` |
 
-{% endtabs %}
+{% endmdtabs %}
 
 7. Pick one block explorer from the [Networks section](../../networks/mainnet/), and enter the URL into the **Block explorer (optional)** field.
 8. Review the values in the fields and click **Save**.

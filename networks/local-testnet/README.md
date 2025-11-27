@@ -23,9 +23,7 @@ The nodes we’re going to run have relatively lightweight hardware requirements
 
 To build the nodes, you'll need some specific software. Run the following command to install the software prerequisites:
 
-{% tabs tab1="MacOS", tab2="Ubuntu" %}
-
-{% tab1 %}
+{% mdtabs title="MacOS" %}
 1. Open a terminal window.
 2.  Check that you have [Homebrew](https://brew.sh/) installed.
 
@@ -67,7 +65,7 @@ To build the nodes, you'll need some specific software. Run the following comman
     source "$HOME/.cargo/env"
     ```
 
-{% tab2 %}
+{% mdtab title="Ubuntu" %}
 1.  Install the following dependencies:
 
     ```shell
@@ -95,15 +93,13 @@ source "$HOME/.cargo/env"
 
 5. Done! You can move on to the [Pre-build](#pre-build) section.
 
-{% endtabs %}
+{% endmdtabs %}
 
 ### Pre-build
 
 Before we can build the Lotus binaries, there's some setup we need to do. We'll create the executable binaries within a new `~/lotus-devnet`.
 
-{% tabs tab1="MacOS Intel", tab2="MacOS ARM", tab3="Ubuntu" %}
-
-{% tab1 %}
+{% mdtabs title="MacOS Intel" %}
 1.  Clone the repository:
 
     ```shell
@@ -117,7 +113,7 @@ Before we can build the Lotus binaries, there's some setup we need to do. We'll 
     ```
 3. Done! You can move on to the [Build](#build) section.
 
-{% tab2 %}
+{% mdtab title="MacOS ARM" %}
 1.  Clone the repository into a new `~/lotus-devnet` directory:
 
     ```shell
@@ -138,7 +134,7 @@ Before we can build the Lotus binaries, there's some setup we need to do. We'll 
     ```
 4. Done! You can move on to the [Build](#build) section.
 
-{% tab3 %}
+{% mdtab title="Ubuntu" %}
 1.  Clone the repository into a new `~/lotus-devnet` directory:
 
     ```shell
@@ -160,7 +156,7 @@ Before we can build the Lotus binaries, there's some setup we need to do. We'll 
     If in doubt, ignore this command and move on to [the next section](#build).
 4. Done! You can move on to the [Build](#build) section.
 
-{% endtabs %}
+{% endmdtabs %}
 
 ### Build
 
